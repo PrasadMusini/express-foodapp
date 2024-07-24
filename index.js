@@ -2,8 +2,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const port = 3000; // or your preferred port
-
+const port = process.env.PORT || 3000;
 const db = require('./db'); // adjust the path to where your db.js file is located
 
 app.use(cors());
