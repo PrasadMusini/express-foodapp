@@ -9,11 +9,11 @@ app.use(cors());
 app.use(express.json());
 // Route to get all items
 
-app.get('/', (req, res) => {
+app.get('/test', (req, res) => {
     res.json({ message: 'Server is working' });
 })
 
-app.get('/items', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
         // Query to fetch all items
         const [rows] = await db.query('SELECT * FROM Items');
